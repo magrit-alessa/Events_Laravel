@@ -19,11 +19,11 @@
 				@foreach($events as $event)
 				<tr>
 				  <td class="table-text">
-					<div >{{$event->Date}}</div>
+					<div >{{$event->date}}</div>
 				  </td>
 				
 				  <td class="table-text">
-					<div >{{$event->Title}}</div>
+					<div >{{$event->title}}</div>
 				  </td>
 				
 				  <td class="table-text">

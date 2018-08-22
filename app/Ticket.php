@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ticket extends Model
 {
-    public function visitors(){
-    	return $this->belongsToMany('App\Registration');
+    public function Tipes(){
+    	return $this->hasOne('App\Registration', 'ticket_id' );
 
     }
 }

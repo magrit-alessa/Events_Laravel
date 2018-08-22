@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\TicketType;
+use App\Ticket;
 use App\Event;
 use App\Registration;
 
@@ -16,10 +16,9 @@ class EventsController extends Controller
     }
 
      public function Visitors($id){
-     $visitors = Event::find($id)->Visitor->get();
-
-     // $tickets= TicketType::all();
-     // dd($tickets);
+     $visitors = Event::find($id)->visitors;
+     
+     // dd($visitors);
       return view('visitors', compact('visitors'));
     }
 }

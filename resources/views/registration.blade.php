@@ -43,8 +43,8 @@
                 
                 <label for="title">Event</label>
                 <select name="event_id" class="custom-select d-block w-100" id="title" required="">
-                    @foreach($event_ids as $id)
-                    <option value="{{$id->id}}">{{$id->Title}}</option>
+                    @foreach($events as $event)
+                    <option value="{{$event->id}}">{{$event->title}}</option>
                     @endforeach
                 </select>
                 

@@ -125,8 +125,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'event_id.*.email' => [
+            'unique' => 'You have already registered for this event'
         ],
     ],
 

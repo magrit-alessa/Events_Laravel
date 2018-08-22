@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    public function Visitor(){
-    	return $this->hasOne('App\Registration', 'event_id' );
+    public function visitors(){
+    	return $this->hasMany('App\Registration')->with('ticket');
   
 }
 }
