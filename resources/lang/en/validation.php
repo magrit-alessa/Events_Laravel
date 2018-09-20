@@ -125,7 +125,7 @@ return [
     */
 
     'custom' => [
-        'event_id.*.email' => [
+        'email.*event_id' => [
             'unique' => 'You have already registered for this event'
         ],
     ],

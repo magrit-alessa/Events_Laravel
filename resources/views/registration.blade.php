@@ -44,7 +44,12 @@
                 <label for="title">Event</label>
                 <select name="event_id" class="custom-select d-block w-100" id="title" required="">
                     @foreach($events as $event)
-                    <option value="{{$event->id}}">{{$event->title}}</option>
+                    <option 
+                    @if($event_id == $event->id)
+                    selected="selected"
+                    @endif
+
+                     value="{{$event->id}}">{{$event->title}}</option>
                     @endforeach
                 </select>
                 
