@@ -12,8 +12,12 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
+    public function boot(UrlGenerator $url)
+    {   
+
+        if(evn('REDIRECT_HTTPS')){
+            $url->forceSchema('https');
+        }
         Schema::defaultStringLength(255);
     }
 
@@ -24,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        if(evn('REDIRECT_HTTPS')){
+            $this->app['request']->server->set('HTTPS', true);
+        }
     }
 }
